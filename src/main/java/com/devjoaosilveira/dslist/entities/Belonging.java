@@ -11,7 +11,7 @@ import java.util.Objects;
 @Table(name = "tb_belonging")
 public class Belonging implements Serializable {
     @EmbeddedId
-   private BelongingPK id = new BelongingPK();
+    private BelongingPK id = new BelongingPK();
 
     private Integer position;
 
