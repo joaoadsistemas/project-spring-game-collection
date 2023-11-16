@@ -1,15 +1,13 @@
 package com.devjoaosilveira.dslist.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@Table(name = "tb_game_list")
 public class GameList implements Serializable {
 
     @Id
