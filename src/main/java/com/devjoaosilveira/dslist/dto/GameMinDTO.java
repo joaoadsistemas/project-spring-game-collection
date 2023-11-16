@@ -1,6 +1,7 @@
 package com.devjoaosilveira.dslist.dto;
 
 import com.devjoaosilveira.dslist.entities.Game;
+import com.devjoaosilveira.dslist.projections.GameMinProjection;
 import org.springframework.beans.BeanUtils;
 
 public class GameMinDTO {
@@ -20,6 +21,12 @@ public class GameMinDTO {
         // Copy all properties entity(Game) for this(GameMinDTO), if the same name properties is equals
         // (NEED GETTERS AND SETTERS, NO ONLY GETTER)
         BeanUtils.copyProperties(entity,this);
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        // Copy all properties projection(GameMinProjection) for this(GameMinDTO), if the same name properties is equals
+        // (NEED GETTERS AND SETTERS, NO ONLY GETTER)
+        BeanUtils.copyProperties(projection,this);
     }
 
     public Long getId() {
